@@ -17,7 +17,7 @@ class CenteredView extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            Colors.green,
+            Colors.lightBlueAccent,
             Colors.blue,
           ],
         ),

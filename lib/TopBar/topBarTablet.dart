@@ -82,7 +82,7 @@ class _TopBarTabletState extends State<TopBarTablet> {
                       Text(
                         'I\'m Sagar!',
                         style: TextStyle(
-                          color: Colors.black38,
+                          color: Colors.black87,
                           fontSize: 20,
                           // fontWeight: FontWeight.bold,
                           fontFamily: 'Tourney',
@@ -91,7 +91,7 @@ class _TopBarTabletState extends State<TopBarTablet> {
                       Text(
                         'Fellow Coder',
                         style: TextStyle(
-                          color: Colors.black45,
+                          color: Colors.black87,
                           fontSize: 21,
                           // fontWeight: FontWeight.bold,
                           fontFamily: 'Tourney',

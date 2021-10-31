@@ -83,7 +83,7 @@ class _TopBarDesktopState extends State<TopBarDesktop> {
                       Text(
                         'I\'m Sagar!',
                         style: TextStyle(
-                          color: Colors.black38,
+                          color: Colors.black87,
                           fontSize: 35,
                           // fontWeight: FontWeight.bold,
                           fontFamily: 'Tourney',
@@ -92,7 +92,7 @@ class _TopBarDesktopState extends State<TopBarDesktop> {
                       Text(
                         'Fellow Coder',
                         style: TextStyle(
-                          color: Colors.black45,
+                          color: Colors.black87,
                           fontSize: 36,
                           // fontWeight: FontWeight.bold,
                           fontFamily: 'Tourney',
@@ -106,12 +106,13 @@ class _TopBarDesktopState extends State<TopBarDesktop> {
                 bottom: 10,
                 left: 10,
                 child: Container(
-                    child: theRowNavigationBar(
-                  _launchfacebook,
-                  _launchInstagram,
-                  _launchGitHub,
-                  _launchLinkedIn,
-                )),
+                  child: theRowNavigationBar(
+                    _launchfacebook,
+                    _launchInstagram,
+                    _launchGitHub,
+                    _launchLinkedIn,
+                  ),
+                ),
               ),
             ],
           ),
