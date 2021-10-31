@@ -14,6 +14,14 @@ class CenteredView extends StatelessWidget {
         top: 30,
         bottom: 30,
       ),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            Colors.green,
+            Colors.blue,
+          ],
+        ),
+      ),
       alignment: Alignment.topCenter,
       child: ConstrainedBox(
         constraints: BoxConstraints(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:my_portfolio/Utilities/constants.dart';
 
 class LeftInfoBarDesktop extends StatefulWidget {
@@ -40,45 +41,87 @@ class _LeftInfoBarDesktopState extends State<LeftInfoBarDesktop> {
             SizedBox(
               height: 20,
             ),
-            Card(
-              child: ListTile(
-                leading: Icon(
-                  Icons.email_outlined,
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(
+                  5,
                 ),
-                title: Text(
-                  'sagarprajapati9803@gmail.com',
-                  style: TextStyle(
-                    // fontFamily: theCircularFontFamily,
-                    fontSize: 12,
-                  ),
+                gradient: LinearGradient(
+                  colors: [Colors.lightGreenAccent, Colors.lightBlueAccent],
                 ),
               ),
+              child: theListTileWidget(),
             ),
-            Card(
-              child: ListTile(
-                leading: Container(
-                  color: Colors.white,
-                  child: Icon(
-                    Icons.connect_without_contact_outlined,
-                  ),
+            SizedBox(
+              height: 10,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(
+                  5,
                 ),
-                title: Text(
-                  'Rinnohara9803#5527',
-                  style: TextStyle(
-                    // fontFamily: theCircularFontFamily,
-                    fontSize: 12,
-                  ),
-                ),
-                subtitle: Text(
-                  'let\'s connect in Discord :-)',
-                  style: TextStyle(
-                    fontSize: 12,
-                    // fontFamily: theCircularFontFamily,
-                  ),
+                gradient: LinearGradient(
+                  colors: [Colors.lightGreenAccent, Colors.lightBlueAccent],
                 ),
               ),
+              child: theDiscordListTileWidget(),
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class theDiscordListTileWidget extends StatelessWidget {
+  const theDiscordListTileWidget({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: Container(
+        // color: Colors.white,
+        child: Icon(
+          FontAwesome.drivers_license,
+        ),
+      ),
+      title: Text(
+        'Rinnohara9803#5527',
+        style: TextStyle(
+          // fontFamily: theCircularFontFamily,
+          fontSize: 12,
+        ),
+      ),
+      subtitle: Text(
+        'let\'s connect in Discord :-)',
+        style: TextStyle(
+          fontSize: 12,
+          // fontFamily: theCircularFontFamily,
+        ),
+      ),
+    );
+  }
+}
+
+class theListTileWidget extends StatelessWidget {
+  const theListTileWidget({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      // tileColor: Colors.lightBlueAccent,
+      leading: Icon(
+        Icons.email_outlined,
+      ),
+      title: Text(
+        'sagarprajapati9803@gmail.com',
+        style: TextStyle(
+          // fontFamily: theCircularFontFamily,
+          fontSize: 12,
         ),
       ),
     );

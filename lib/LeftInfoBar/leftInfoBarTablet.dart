@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'leftInfoBarDesktop.dart';
+
 class LeftInfoBarTablet extends StatefulWidget {
   const LeftInfoBarTablet({Key? key}) : super(key: key);
 
@@ -39,51 +41,30 @@ class _LeftInfoBarDesktopState extends State<LeftInfoBarTablet> {
             SizedBox(
               height: 20,
             ),
-            Card(
-              child: ListTile(
-                leading: IconButton(
-                  onPressed: () {},
-                  iconSize: 15,
-                  icon: Icon(
-                    Icons.email_outlined,
-                  ),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(
+                  5,
                 ),
-                title: Text(
-                  'sagarprajapati9803@gmail.com',
-                  style: TextStyle(
-                    // fontFamily: theCircularFontFamily,
-
-                    fontSize: 10,
-                  ),
+                gradient: LinearGradient(
+                  colors: [Colors.lightGreenAccent, Colors.lightBlueAccent],
                 ),
               ),
+              child: theListTileWidget(),
             ),
-            Card(
-              child: ListTile(
-                leading: Container(
-                  color: Colors.white,
-                  child: IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.connect_without_contact_outlined,
-                    ),
-                  ),
+            SizedBox(
+              height: 10,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(
+                  5,
                 ),
-                title: Text(
-                  'Rinnohara9803#5527',
-                  style: TextStyle(
-                    // fontFamily: theCircularFontFamily,
-                    fontSize: 10,
-                  ),
-                ),
-                subtitle: Text(
-                  'let\'s connect in Discord :-)',
-                  style: TextStyle(
-                    fontSize: 10,
-                    // fontFamily: theCircularFontFamily,
-                  ),
+                gradient: LinearGradient(
+                  colors: [Colors.lightGreenAccent, Colors.lightBlueAccent],
                 ),
               ),
+              child: theDiscordListTileWidget(),
             ),
           ],
         ),

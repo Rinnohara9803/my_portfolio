@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/Utilities/constants.dart';
 import 'package:my_portfolio/Utilities/theBoxes.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class TopBarDesktop extends StatefulWidget {
   const TopBarDesktop({Key? key}) : super(key: key);
@@ -10,6 +11,33 @@ class TopBarDesktop extends StatefulWidget {
 }
 
 class _TopBarDesktopState extends State<TopBarDesktop> {
+  static const _facebookUrl =
+      'https://www.facebook.com/profile.php?id=100008867498604';
+
+  void _launchfacebook() async => await canLaunch(_facebookUrl)
+      ? await launch(_facebookUrl)
+      : throw 'Could not launch $_facebookUrl';
+
+  static const _instagramUrl =
+      'https://www.instagram.com/rin.nohara9803/?hl=en';
+
+  void _launchInstagram() async => await canLaunch(_instagramUrl)
+      ? await launch(_instagramUrl)
+      : throw 'Could not launch $_instagramUrl';
+
+  static const _githubUrl = 'https://github.com/Rinnohara9803';
+
+  void _launchGitHub() async => await canLaunch(_githubUrl)
+      ? await launch(_githubUrl)
+      : throw 'Could not launch $_githubUrl';
+
+  static const _linkedInUrl =
+      'https://www.linkedin.com/in/sagar-prajapati-65bbbb1a8/';
+
+  void _launchLinkedIn() async => await canLaunch(_linkedInUrl)
+      ? await launch(_linkedInUrl)
+      : throw 'Could not launch $_linkedInUrl';
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -78,88 +106,12 @@ class _TopBarDesktopState extends State<TopBarDesktop> {
                 bottom: 10,
                 left: 10,
                 child: Container(
-                  child: Row(
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                          // Navigator.push(
-                          //   context,
-                          //   MaterialPageRoute(
-                          //     builder: (context) => GreenContainer(),
-                          //   ),
-                          // );
-                        },
-                        child: Container(
-                          height: 25,
-                          width: 90,
-                          decoration: BoxDecoration(
-                            border: Border.all(),
-                            borderRadius: BorderRadius.circular(
-                              5,
-                            ),
-                          ),
-                          child: Center(
-                            child: Text(
-                              'Contact',
-                              style: TextStyle(
-                                fontSize: 15,
-                                fontFamily: 'Circular',
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Container(
-                        height: 25,
-                        width: 90,
-                        decoration: BoxDecoration(
-                          border: Border.all(),
-                          borderRadius: BorderRadius.circular(
-                            5,
-                          ),
-                        ),
-                        child: Center(
-                          child: Text(
-                            'Resume',
-                            style: TextStyle(
-                              fontSize: 15,
-                              fontFamily: 'Circular',
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Container(
-                        height: 25,
-                        width: 90,
-                        decoration: BoxDecoration(
-                          border: Border.all(),
-                          borderRadius: BorderRadius.circular(
-                            5,
-                          ),
-                        ),
-                        child: Center(
-                          child: Text(
-                            'gitHub',
-                            style: TextStyle(
-                              fontSize: 15,
-                              fontFamily: 'Circular',
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
+                    child: theRowNavigationBar(
+                  _launchfacebook,
+                  _launchInstagram,
+                  _launchGitHub,
+                  _launchLinkedIn,
+                )),
               ),
             ],
           ),

@@ -48,6 +48,7 @@ class _HomeContentMobileState extends State<HomeContentMobile> {
     return Scaffold(
       key: _key,
       drawer: Drawer(
+        elevation: 10,
         child: navigationBar(
           _launchfacebook,
           _launchInstagram,

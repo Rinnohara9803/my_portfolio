@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/HomeView/homeview.dart';
 
-void main() {
+void main() async {
   runApp(MyPortFolio());
 }
 
 class MyPortFolio extends StatefulWidget {
-  const MyPortFolio({Key? key}) : super(key: key);
+  MyPortFolio({Key? key}) : super(key: key);
 
   @override
   _MyPortFolioState createState() => _MyPortFolioState();
